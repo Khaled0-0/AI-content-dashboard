@@ -1,9 +1,10 @@
 import React from 'react'
 import { BsCurrencyDollar } from 'react-icons/bs'
-import { GoDotFill } from 'react-icons/go';
+import { MdCircle } from 'react-icons/md';
 import { Stacked, Pie, Button, SparkLine } from '../components'
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy'
 import { useStateContext } from '../contexts/ContextProvider'
+import welcomeBg from '../data/welcome-bg.svg'
 
 
 
@@ -16,7 +17,9 @@ const Ecommerce = () => {
    return (
       <div className='mt-12'>
          <div className='flex flex-wrap justify-center lg:flex-nowrap'>
-            <div className="w-full p-8 m-3 bg-white bg-center bg-no-repeat bg-cover dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl lg:w-80 pt-9 bg-hero-pattern">
+            <div className="w-full p-8 m-3 bg-white bg-center bg-no-repeat bg-cover dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl lg:w-80 pt-9 "
+               style={{ backgroundImage: `url(${welcomeBg})` }}
+            >
                <div className='flex items-center justify-between'>
                   <div>
                      <p className='font-bold text-gray-400'>Earnings</p>
@@ -56,11 +59,11 @@ const Ecommerce = () => {
                   <p className="text-xl font-semibold">Revenue Updates</p>
                   <div className="flex items-center gap-4">
                      <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
-                        <span><GoDotFill /></span>
+                        <span><MdCircle /></span>
                         <span>Expense</span>
                      </p>
                      <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
-                        <span><GoDotFill /></span>
+                        <span><MdCircle /></span>
                         <span>Budget</span>
                      </p>
                   </div>
